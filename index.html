@@ -34,7 +34,7 @@
       border-radius: var(--radius);
       box-shadow: 0 8px 30px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
       text-align: center;
-      max-width: 480px;
+      max-width: 520px;
       width: 100%;
     }
 
@@ -69,6 +69,17 @@
       font-size: 17px;
       color: var(--muted);
       line-height: 1.6;
+      margin-bottom: 26px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 16px 18px;
+      line-height: 1.5;
       margin-bottom: 30px;
     }
 
@@ -88,32 +99,44 @@
     a {
       color: var(--accent);
       text-decoration: none;
+      font-weight: 500;
     }
 
-    a:hover { text-decoration: underline; }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
   <div class="card">
     <div class="logo">
-      <!-- Minimal AI Circle Logo -->
+      <!-- Simple AI Circle Logo -->
       <svg viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="1.4" fill="none" opacity=".3"/>
         <path d="M7 12a5 5 0 1 1 5 5" stroke="#fff" stroke-width="1.5" fill="none"/>
         <circle cx="12" cy="12" r="2.2" fill="#fff"/>
       </svg>
     </div>
+
     <h1>Coach360AI</h1>
     <p>
-      Our AI-driven communication and coaching platform is currently under maintenance.<br>
+      Our AI-driven coaching platform is currently under maintenance.<br>
       We’ll be back shortly with something even better 🚀
     </p>
+
+    <div class="tagline">
+      From <strong>first impression</strong> to <strong>final conversion</strong> — practice, analyze, and improve every customer conversation with <strong>AI-driven coaching</strong> and <strong>performance analytics.</strong>
+    </div>
+
     <div class="line"></div>
     <p>
       For any inquiries, reach us at<br>
-      <a href="mailto:coach360ai@gmail.com">hello@coach360ai.com</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@coach360ai.com" target="_blank" rel="noopener noreferrer">
+        hello@coach360ai.com
+      </a>
     </p>
+
     <footer>© <span id="year"></span> Coach360AI · All rights reserved</footer>
   </div>
 
