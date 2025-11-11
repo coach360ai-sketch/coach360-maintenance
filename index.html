@@ -6,8 +6,9 @@
   <title>Coach360AI | Under Maintenance</title>
   <style>
     :root {
-      --bg: #0d1117;
-      --card-bg: #111620;
+      --bg1: #0d1117;
+      --bg2: #111a24;
+      --card-bg: rgba(17, 22, 32, 0.9);
       --text: #f0f6fc;
       --muted: #8b949e;
       --accent: #58a6ff;
@@ -20,15 +21,25 @@
       margin: 0;
       height: 100vh;
       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
-      background: var(--bg);
       color: var(--text);
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .card {
+      position: relative;
       background: var(--card-bg);
       padding: 50px 40px;
       border-radius: var(--radius);
@@ -36,25 +47,41 @@
       text-align: center;
       max-width: 520px;
       width: 100%;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .logo {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 20px;
-      border-radius: 18px;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 22px;
+      border-radius: 20px;
       background: radial-gradient(circle at 30% 30%, var(--accent), #3b82f6 70%);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 16px rgba(88,166,255,0.3);
+      box-shadow: 0 0 25px rgba(88,166,255,0.5);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
 
     .logo svg {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       fill: #fff;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     h1 {
@@ -81,6 +108,12 @@
       padding: 16px 18px;
       line-height: 1.5;
       margin-bottom: 30px;
+      animation: fadeIn 1.5s ease 0.3s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
 
     .line {
@@ -102,16 +135,13 @@
       font-weight: 500;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 
 <body>
   <div class="card">
     <div class="logo">
-      <!-- Simple AI Circle Logo -->
       <svg viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="1.4" fill="none" opacity=".3"/>
         <path d="M7 12a5 5 0 1 1 5 5" stroke="#fff" stroke-width="1.5" fill="none"/>
@@ -132,8 +162,8 @@
     <div class="line"></div>
     <p>
       For any inquiries, reach us at<br>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@coach360ai.com" target="_blank" rel="noopener noreferrer">
-        hello@coach360ai.com
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=coach360ai@gmail.com" target="_blank" rel="noopener noreferrer">
+        coach360ai@gmail.com
       </a>
     </p>
 
