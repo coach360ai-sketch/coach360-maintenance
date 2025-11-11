@@ -2,262 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coach360AI | We’ll be back soon</title>
-  <meta name="description" content="Coach360AI is getting upgrades. We’ll be back shortly with something amazing." />
-  <meta name="theme-color" content="#0d1117" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach360AI | Under Maintenance</title>
   <style>
-    :root{
-      --bg:#0d1117;
-      --card:#111620;
-      --text:#f0f6fc;
-      --muted:#c9d1d9;
-      --brand:#58a6ff;
-      --brand-2:#7ee787;
-      --ring:#2a2f3a;
-      --ring-2:#21262d;
+    :root {
+      --bg: #0d1117;
+      --card-bg: #111620;
+      --text: #f0f6fc;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --radius: 14px;
     }
+
     * { box-sizing: border-box; }
-    html,body { height:100%; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1200px 800px at -10% -20%, rgba(88,166,255,.08), transparent 60%),
-        radial-gradient(1000px 700px at 110% -10%, rgba(126,231,135,.06), transparent 60%),
-        var(--bg);
-      display:grid;
-      place-items:center;
-      padding:32px;
+
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
-    .wrap{
-      width:100%;
-      max-width:880px;
-      display:grid;
-      gap:20px;
+    .card {
+      background: var(--card-bg);
+      padding: 50px 40px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
     }
 
-    .card{
-      position:relative;
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-      border:1px solid var(--ring);
-      box-shadow: 0 10px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
-      border-radius:20px;
-      padding:28px;
-      overflow:hidden;
-      backdrop-filter: blur(6px);
+    .logo {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 20px;
+      border-radius: 18px;
+      background: radial-gradient(circle at 30% 30%, var(--accent), #3b82f6 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(88,166,255,0.3);
     }
 
-    /* animated accent ring */
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      border-radius:22px;
-      padding:1px;
-      background:
-        conic-gradient(from var(--angle), var(--brand), var(--brand-2), var(--brand));
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor; mask-composite: exclude;
-      animation: spin 6s linear infinite;
-      opacity:.25;
-    }
-    @keyframes spin { to { --angle: 1turn; } }
-
-    header{
-      display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-    }
-    .logo{
-      width:44px; height:44px; border-radius:12px;
-      background: radial-gradient(circle at 30% 30%, var(--brand), #3b82f6 60%);
-      display:grid; place-items:center;
-      box-shadow: 0 6px 18px rgba(88,166,255,.35);
-      border:1px solid var(--ring-2);
-    }
-    .logo svg{ width:24px; height:24px; }
-
-    h1{ margin:0; font-size: clamp(28px, 4vw, 40px); letter-spacing:.2px; }
-    .sub{ color:var(--muted); margin:6px 0 0; font-size: clamp(14px, 2.4vw, 16px); }
-
-    .status{
-      display:flex; align-items:center; gap:10px; margin:18px 0 0;
-      color:#9fb7ff; font-weight:600;
-    }
-    .dot{
-      width:10px; height:10px; border-radius:50%;
-      background: var(--brand);
-      box-shadow:0 0 0 0 rgba(88,166,255,.6);
-      animation: pulse 1.6s infinite;
-    }
-    @keyframes pulse{
-      0% { box-shadow:0 0 0 0 rgba(88,166,255,.6); }
-      70%{ box-shadow:0 0 0 12px rgba(88,166,255,0); }
-      100%{ box-shadow:0 0 0 0 rgba(88,166,255,0); }
+    .logo svg {
+      width: 38px;
+      height: 38px;
+      fill: #fff;
+      opacity: 0.9;
     }
 
-    .grid{
-      display:grid; gap:18px; grid-template-columns: 1fr; margin-top:22px;
-    }
-    @media (min-width: 820px){
-      .grid{ grid-template-columns: 1.1fr .9fr; }
-    }
-
-    .tile{
-      background: rgba(255,255,255,.02);
-      border:1px solid var(--ring);
-      border-radius:16px; padding:18px;
+    h1 {
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--accent);
+      letter-spacing: 0.3px;
     }
 
-    .spinner{
-      margin: 16px 0 12px;
-      width:56px; height:56px;
-      border:6px solid #2f3339; border-top:6px solid var(--brand);
-      border-radius:50%;
-      animation: spin2 1s linear infinite;
+    p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 30px;
     }
-    @keyframes spin2 { to { transform: rotate(360deg); } }
 
-    .countdown{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;
+    .line {
+      width: 60%;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 24px auto;
     }
-    .pill{
-      min-width:84px; text-align:center; padding:10px 12px;
-      border-radius:12px; border:1px solid var(--ring);
-      background: rgba(255,255,255,.02);
-      font-weight:600;
-    }
-    .pill small{ display:block; color:var(--muted); font-weight:500; margin-top:4px; }
 
-    form{
-      display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;
+    footer {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 20px;
     }
-    input,button{
-      font: inherit;
-      border-radius:12px; border:1px solid var(--ring);
-      background:#0f141b; color:var(--text);
-      padding:12px 14px;
-    }
-    input{ flex:1 1 240px; outline:none; }
-    input::placeholder{ color:#8b949e; }
-    button{
-      cursor:pointer; font-weight:700; letter-spacing:.2px;
-      background: linear-gradient(135deg, var(--brand), #3ea6ff);
-      border:1px solid #3b79c9;
-      box-shadow: 0 8px 18px rgba(88,166,255,.25);
-    }
-    button:active{ transform: translateY(1px); }
 
-    .links{
-      display:flex; gap:14px; flex-wrap:wrap; margin-top:10px; color:var(--muted);
+    a {
+      color: var(--accent);
+      text-decoration: none;
     }
-    .links a{ color:var(--text); text-decoration:none; border-bottom:1px dashed rgba(255,255,255,.22); }
-    .social{ display:flex; gap:10px; margin-top:12px; }
-    .social a{
-      width:36px; height:36px; display:grid; place-items:center;
-      border-radius:10px; border:1px solid var(--ring); background:#0f141b;
-      text-decoration:none;
-    }
-    footer{ text-align:center; color:var(--muted); margin-top:8px; font-size:14px; }
+
+    a:hover { text-decoration: underline; }
   </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <section class="card">
-      <header>
-        <div class="logo" aria-hidden="true">
-          <!-- Simple C360 mark -->
-          <svg viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" stroke="white" opacity=".25"/>
-            <path d="M7 12a5 5 0 1 1 5 5" stroke="white" stroke-width="1.6"/>
-            <circle cx="12" cy="12" r="2.4" fill="white"/>
-          </svg>
-        </div>
-        <div>
-          <h1>Coach360AI</h1>
-          <p class="sub">Our AI-driven coaching platform is getting upgrades. We’ll be back soon with something amazing 🚀</p>
-          <div class="status"><span class="dot"></span> Under maintenance</div>
-        </div>
-      </header>
-
-      <div class="grid">
-        <!-- Left: Status + Countdown -->
-        <div class="tile">
-          <div class="spinner" aria-hidden="true"></div>
-          <p class="sub" id="etaText">Estimated time to relaunch:</p>
-          <div class="countdown" role="group" aria-label="Countdown">
-            <div class="pill"><span id="d">—</span><small>Days</small></div>
-            <div class="pill"><span id="h">—</span><small>Hours</small></div>
-            <div class="pill"><span id="m">—</span><small>Minutes</small></div>
-            <div class="pill"><span id="s">—</span><small>Seconds</small></div>
-          </div>
-        </div>
-
-        <!-- Right: Notify + Links -->
-        <div class="tile">
-          <h3 style="margin:0 0 6px;">Get notified when we’re live</h3>
-          <p class="sub">Leave your email and we’ll ping you the moment we’re back.</p>
-          <!-- NOTE: Replace action with your form endpoint (Formspree, Beehiiv, Mailchimp, etc.) -->
-          <form action="https://formspree.io/f/your-id" method="POST">
-            <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
-            <button type="submit" aria-label="Notify me">Notify me</button>
-          </form>
-
-          <div class="links">
-            <span>Questions? Write to</span>
-            <a href="mailto:hello@coach360ai.com">hello@coach360ai.com</a>
-          </div>
-
-          <div class="social" aria-label="Social links">
-            <a href="https://www.linkedin.com/company/coach360ai" aria-label="LinkedIn" title="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zM8.5 8h3.8v2.05h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V23h-4v-5.96c0-1.42-.03-3.25-1.98-3.25-1.98 0-2.28 1.55-2.28 3.15V23h-4V8z"/></svg>
-            </a>
-            <a href="https://x.com/coach360ai" aria-label="X / Twitter" title="X">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M18.9 2H22l-7.8 8.9L24 22h-7.3l-5.7-6.9L4.8 22H2l8.6-9.8L0 2h7.4l5.2 6.3L18.9 2zM17.1 20h2L6.9 4H4.8l12.3 16z"/></svg>
-            </a>
-            <a href="https://coach360ai.com" aria-label="Website" title="Website">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm7.94 9H16.7c-.16-2.19-.86-4.17-1.93-5.67A8.02 8.02 0 0119.94 11zM12 4c1.6 0 3.09 2.46 3.43 6H8.57C8.91 6.46 10.4 4 12 4zM4.06 13H7.3c.16 2.19.86 4.17 1.93 5.67A8.02 8.02 0 014.06 13zM7.3 11H4.06a8.02 8.02 0 013.17-5.67C8.16 6.83 7.46 8.81 7.3 11zm9 2c-.34 3.54-1.83 6-3.43 6s-3.09-2.46-3.43-6h6.86zM12 20a8 8 0 01-3.47-.8c1.07-1.5 1.77-3.48 1.93-5.67h6.24A8.02 8.02 0 0112 20z"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Coach360AI · All rights reserved
-    </footer>
-  </main>
+  <div class="card">
+    <div class="logo">
+      <!-- Minimal AI Circle Logo -->
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="1.4" fill="none" opacity=".3"/>
+        <path d="M7 12a5 5 0 1 1 5 5" stroke="#fff" stroke-width="1.5" fill="none"/>
+        <circle cx="12" cy="12" r="2.2" fill="#fff"/>
+      </svg>
+    </div>
+    <h1>Coach360AI</h1>
+    <p>
+      Our AI-driven communication and coaching platform is currently under maintenance.<br>
+      We’ll be back shortly with something even better 🚀
+    </p>
+    <div class="line"></div>
+    <p>
+      For any inquiries, reach us at<br>
+      <a href="mailto:coach360ai@gmail.com">hello@coach360ai.com</a>
+    </p>
+    <footer>© <span id="year"></span> Coach360AI · All rights reserved</footer>
+  </div>
 
   <script>
-    // footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // OPTIONAL: countdown target (set your relaunch date/time here)
-    // Format: YYYY, M-1, D, H, M, S  (month is 0-indexed)
-    const target = new Date(2026, 0, 15, 10, 0, 0); // Jan 15, 2026, 10:00
-    const dE = document.getElementById('d'),
-          hE = document.getElementById('h'),
-          mE = document.getElementById('m'),
-          sE = document.getElementById('s'),
-          eta = document.getElementById('etaText');
-
-    function tick(){
-      const now = new Date();
-      const diff = target - now;
-      if (diff <= 0){
-        dE.textContent = hE.textContent = mE.textContent = sE.textContent = "0";
-        eta.textContent = "We’re relaunching…";
-        return;
-      }
-      const d = Math.floor(diff / (1000*60*60*24));
-      const h = Math.floor((diff / (1000*60*60)) % 24);
-      const m = Math.floor((diff / (1000*60)) % 60);
-      const s = Math.floor((diff / 1000) % 60);
-      dE.textContent = d; hE.textContent = h; mE.textContent = m; sE.textContent = s;
-      requestAnimationFrame(() => setTimeout(tick, 500));
-    }
-    tick();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
